@@ -7,6 +7,12 @@ function saveBookmark(e) {
   var siteName = document.getElementById("siteName").value;
   var siteURL = document.getElementById("siteURL").value;
 
+  // Validate form
+  if (!siteName || !siteURL) {
+    alert('Please fill in the form');
+    return false;
+  }
+
   var bookmark = {
     name: siteName,
     url: siteURL
