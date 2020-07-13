@@ -67,8 +67,13 @@ label {
 .marketing {
   margin: 40px 0;
 }
-.well {
-  border-style: solid;
+.well h3 {
+  font-size: 24px;
+  padding-left: 15px;
+}
+
+.btn-success {
+  margin-left: 12px;
 }
 
 /* Responsive: Portrait tablets and up */
