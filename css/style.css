@@ -22,6 +22,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
+  text-align: center;
 }
 
 /* Custom page footer */
@@ -34,7 +35,7 @@ body {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 750px;
   }
 }
 .container-narrow > hr {
@@ -49,6 +50,16 @@ body {
 .jumbotron .btn {
   padding: 14px 24px;
   font-size: 21px;
+}
+
+.jumbotron h2 {
+  padding-bottom: 20px;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+label {
+  font-weight: bold;
 }
 
 /* Supporting marketing content */
