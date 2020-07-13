@@ -41,6 +41,9 @@ function saveBookmark(e) {
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
   }
 
+  // Clear form
+  document.getElementById('myForm').reset();
+
   // Re-fetch bookmarks
   fetchBookmarks();
 
@@ -105,10 +108,10 @@ function validateForm(siteName, siteURL) {
 
   return true;
 
-  function addhttp(url) {
-    if () {
-
-    }
-  }
+  // function addhttp(url) {
+  //   if () {
+  //
+  //   }
+  // }
 
 }
