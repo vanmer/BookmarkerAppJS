@@ -66,8 +66,8 @@ label {
 .marketing {
   margin: 40px 0;
 }
-.marketing p + h4 {
-  margin-top: 28px;
+.well {
+  border-style: solid;
 }
 
 /* Responsive: Portrait tablets and up */

@@ -21,7 +21,7 @@ function saveBookmark(e) {
   */
 
   // Test if bookmark is null
-  if (localStorage.getItem('bookmarks') === null) {
+  if (localStorage.getItem("bookmarks") === null) {
     // Init array
     var bookmarks = [];
     // Add to array
@@ -37,6 +37,33 @@ function saveBookmark(e) {
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
   }
 
+
+
   // Prevent form from submitting
   e.preventDefault();
+}
+
+// Fetch bookmarks
+function fetchBookmarks() {
+  // Get bookmarks from localStorage
+  var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+  // Get output id
+  var bookmarkSResults = document.getElementById('bookmarksResults');
+
+  // Build output
+  bookmarksResults.innerHTML = '';
+  for (var i = 0; i < bookmarks.length; i++) {
+    var name = bookmarks[i].name;
+    var url = bookmarks[i].url;
+
+    bookmarksResults.innerHTML += '<div class="well">'+
+                                  '<h3>'+name+
+                                  ' <a class="btn btn-success" target="_blank" href="'+url+'">Visit</a> ' +
+                                  ' <a onclick="deleteBookmark(\'+url+\')" class="btn btn-danger" href="#">Delete</a>'
+                                  '</h3>'+
+                                  '</div>';
+
+
+  }
+
 }
